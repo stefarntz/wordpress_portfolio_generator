@@ -1,7 +1,7 @@
 <?php
 /*
-Plugin Name: Custom Portfolio Plugin
-Description: Plugin to generate portfolios with customizable buttons and empty pages.
+Plugin Name: Portfolio generator
+Description: generate portfolios with customizable buttons and empty pages.
 Version: 1.0
 */
 
