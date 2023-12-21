@@ -2,7 +2,7 @@
 /*
 Plugin Name: Portfolio generator
 Description: generate portfolios with customizable buttons and empty pages.
-Version: 1.0
+Version: 1.0.1
 */
 
 // Portfolio generation function
