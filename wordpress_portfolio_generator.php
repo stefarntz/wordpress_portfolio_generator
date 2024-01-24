@@ -2,7 +2,7 @@
 /*
 Plugin Name: Portfolio generator
 Description: generate portfolios with customizable buttons and empty pages.
-Version: 1.0.1
+Version: 1.0.2
 */
 
 // Portfolio generation function
@@ -74,11 +74,6 @@ function generate_portfolio($button_names) {
     }
 }
 
-
-
-
-
-
 // Admin menu for portfolio generation
 function custom_portfolio_plugin_menu() {
     add_menu_page(
@@ -117,6 +112,13 @@ function generate_portfolio_page() {
         generate_portfolio($button_names);
     }
     ?>
+    <style>
+        /* Add rounded corners to buttons */
+        #addButton,
+        [type="submit"] {
+            border-radius: 5px;
+        }
+    </style>
     <div class="wrap">
         <h2>Generate Portfolio</h2>
         <h4>If values are not changed, default values will be used</h4>
@@ -133,9 +135,11 @@ function generate_portfolio_page() {
 
             <div id="buttonFields"></div>
 
-            <button type="button" id="addButton" style="background-color: #0073AA; color: white; padding: 8px 16px; border: none; cursor: pointer;">Add Button</button><br><br>
+            <button type="button" id="addButton" style="background-color: #0073AA; color: white; padding: 8px 16px; border: none; cursor: pointer; border-radius: 5px;">
 
-            <input type="submit" name="submit" value="Generate Portfolio" style="background-color: #0073AA; color: white; padding: 10px 20px; border: none; cursor: pointer;">
+Add Button</button><br><br>
+
+            <input type="submit" name="submit" value="Generate Portfolio" style="background-color: #0073AA; color: white; padding: 10px 20px; border: none; cursor: pointer; border-radius: 5px;">
             <input type="hidden" id="button_count" name="button_count" value="<?php echo count($default_button_names); ?>">
         </form>
     </div>
